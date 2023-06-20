@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal;
 }
+.gallery-item {
+  width: 200px;
+  padding: 5px;
+}
 /* =======================================================
 *
 * 	Template Style
