@@ -218,6 +218,86 @@
 		$(window).stellar();
 	};
 
+	function timestamp() {
+		// Create a new Date object
+		let currentDate = new Date();
+
+		// Helper function to pad single-digit values with leading zeros
+		function padWithZero(value) {
+			return value < 10 ? '0' + value : value;
+		}
+
+		// Format the date and time components
+		let day = padWithZero(currentDate.getDate());
+		let month = padWithZero(currentDate.getMonth() + 1);
+		let year = currentDate.getFullYear().toString().slice(-2);
+		let hours = padWithZero(currentDate.getHours());
+		let minutes = padWithZero(currentDate.getMinutes());
+		let seconds = padWithZero(currentDate.getSeconds());
+
+		// Combine the formatted date and time
+		return day + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+	}
+
+	function addComment(name, comment, datetime) {
+		let clonedDiv = $('#comment').clone().removeClass('d-none').removeAttr('id');
+		clonedDiv.hide();
+		clonedDiv.find('h6').text(name);
+		clonedDiv.find('p').eq(0).text(comment);
+		clonedDiv.find('time').eq(0).text(datetime);
+		$('#comment').after(clonedDiv);
+		clonedDiv.fadeIn(1500);
+	}
+
+	$("#comment-submit").click(function(e){
+		e.preventDefault();
+
+		let rule = /^[A-Za-z\s]+$/;
+		let name = $("#name-input").val();
+		let comment = $("#comment-input").val();
+		let datetime = timestamp();
+
+		console.log(name+'   '+comment+' '+datetime);
+		
+		if (rule.test(name) == true && rule.test(comment) == true) {
+			addComment(name, comment, datetime);
+			$('#chat-content').animate({ scrollTop: 0 }, 'fast');
+			$.ajax({
+				url: 'https://icypeach26-30cd.restdb.io/rest/comments?apikey=64928a82acb4d41a96344b00',
+				crossDomain: true,
+				data: {name, comment, datetime},
+				dataType : 'json',
+				type: 'POST',
+				success: function(data){
+					console.log(data);
+				},
+				error: function(data){
+					console.log(data);
+				}
+			});
+		} else {
+			alert('Yang bener kalo input');
+		}
+
+	});
+
+	// Button
+	function getComments() {
+		$.ajax({
+			url: 'https://icypeach26-30cd.restdb.io/rest/comments?apikey=64928a82acb4d41a96344b00',
+			crossDomain: true,
+			type: 'GET',
+			success: function(data){
+				$.each(data ,function(index, value) {
+					console.log(value)
+					addComment(value.name, value.comment, value.datetime)
+				})
+			},
+			error: function(data){
+				console.log(data);
+			}
+		});
+	}
 	
 	$(function(){
 		mobileMenuOutsideClick();
@@ -231,6 +311,7 @@
 		loaderPage();
 		counter();
 		counterWayPoint();
+		getComments();
 	});
 
 
