@@ -861,10 +861,10 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   position: absolute;
   content: " ";
-  width: 1px;
+  width: 3px;
   background-color: #d4d4d4;
   left: 50%;
-  margin-left: 0px;
+  margin-left: -2.5px;
 }
 @media screen and (max-width: 480px) {
   .timeline:before {
@@ -1441,6 +1441,14 @@ form label {
 .fh5co-section {
     padding: 3em 0;
   }
+}
+
+#fh5co-couple-story{
+  background-size: cover;
+  background-image: url('../images/background/blue-brush-1.jpg');
+}
+div.timeline-panel{
+  background-color: white;
 }
 
 #fh5co-couple{
