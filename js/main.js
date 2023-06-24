@@ -270,7 +270,6 @@
 				dataType : 'json',
 				type: 'POST',
 				success: function(data){
-					console.log(data);
 				},
 				error: function(data){
 					console.log(data);
@@ -286,14 +285,18 @@
 	});
 
 	// Button
-	function getComments() {
+	function startUp() {
+		let fullName = new URLSearchParams(window.location.search).get('to');
+		
+		$("#name-input").val(fullName);
+		$('#full-name').text(fullName);
+
 		$.ajax({
 			url: 'https://icypeach26-30cd.restdb.io/rest/comments?apikey=64928a82acb4d41a96344b00',
 			crossDomain: true,
 			type: 'GET',
 			success: function(data){
 				$.each(data ,function(index, value) {
-					console.log(value)
 					addComment(value.name, value.comment, value.datetime)
 				})
 			},
@@ -315,7 +318,7 @@
 		loaderPage();
 		counter();
 		counterWayPoint();
-		getComments();
+		startUp();
 	});
 
 
