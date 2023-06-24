@@ -261,6 +261,7 @@
 		
 		if (rule.test(name) == true && rule.test(comment) == true) {
 			addComment(name, comment, datetime);
+			$('#sent-comment')[0].play();
 			$('#chat-content').animate({ scrollTop: 0 }, 'fast');
 			$.ajax({
 				url: 'https://icypeach26-30cd.restdb.io/rest/comments?apikey=64928a82acb4d41a96344b00',
@@ -278,6 +279,9 @@
 		} else {
 			alert('Yang bener kalo input');
 		}
+
+		$("#name-input").val('');
+		$("#comment-input").val('');
 
 	});
 

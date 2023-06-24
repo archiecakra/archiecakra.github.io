@@ -9,21 +9,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://ngodingsolusi.github.io/the-wedding-of-rehan-maulidan/">
-    <img src="images/readme/half%20circle.png" alt="Logo" width="120" height="120">
+  <a href="https://ani-archie.site/">
+    <img src="images/half%20circle%20flower-500.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h1 align="center">The Wedding</h1>
+  <h1 align="center">Our Wedding Invitation</h1>
 
   <p align="center">
-    <strong>Rehan & Maulidan</strong>
+    <strong>Ani & Archie</strong>
     <br />
-    <a href="https://ngodingsolusi.github.io/the-wedding-of-rehan-maulidan/">Explore the Invitation ! »</a>
-    <br />
-    <br />
-    <a href="https://github.com/rayhanyulanda">Rayhan Yulanda</a>
+    <a href="https://ani-archie.site/">Explore the Invitation ! »</a>
+    <a href="">Archie Cakra</a>
     ·
-    <a href="https://github.com/maulidannashuha">Maulidan Nashuha</a>
+    <a href="">Zulfa Qurani</a>
   </p>
 </div>
 
@@ -32,6 +30,7 @@
 - Save google calendar
 - Couple profile
 - Event date
+- Timeline
 - Gallery photos
 - Quotes
 - Health protocol
@@ -54,15 +53,6 @@ Reach me around the web :
 <a href="https://www.instagram.com/maulidannashuha/" target="_blank">
 <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram">
 </a>
-<!--<a href="https://twitter.com/ngodingsolusi" target="_blank">
-<img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter">
-</a>
-<a href="https://dev.to/ABSphreak" target="_blank">
-<img src="https://img.shields.io/badge/DEV-%230A0A0A.svg?&style=flat-square&logo=DEV.to&logoColor=white" alt="DEV.to">
-</a>
-<a href="https://open.spotify.com/user/0170agi99s5hh187g7mtz245b" target="_blank">
-<img src="https://img.shields.io/badge/Spotify-%231ED760.svg?&style=flat-square&logo=spotify&logoColor=white" alt="Spotify">
-</a>-->
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -93,6 +83,7 @@ Reach me around the web :
 - [Flaticon](https://flaticon.com) - for the assets
 - [Freepik](https://freepik.com) - for the images
 - [Base Template](https://technext.github.io/wedding/)
+- [Modified Base Template](https://github.com/NgodingSolusi/the-wedding-of-rehan-maulidan) Rehan & Maulidan - For the beautifull design
 
 ### Show some :heart: with star the repo to support the project
 [![GitHub stars](https://img.shields.io/github/stars/ngodingsolusi/the-wedding-of-rehan-maulidan.svg?style=social&label=Star)](https://github.com/ngodingsolusi/the-wedding-of-rehan-maulidan)
