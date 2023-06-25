@@ -803,7 +803,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #overlay {
   background: #ffffff;
-  background-image: url("../images/overlay.JPG");
+  /* background-image: url("../images/overlay.JPG"); */
+  background-image: url("https://drive.google.com/uc?export=view&id=1_iIhFo2M9oWCV-INIDQSjBauz0776Sc0");
   background-size: cover;
   height: 100%;
   width: 100%;
