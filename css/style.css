@@ -803,8 +803,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #overlay {
   background: #ffffff;
-  /* background-image: url("../images/overlay.JPG"); */
-  background-image: url("https://drive.google.com/uc?export=view&id=1_iIhFo2M9oWCV-INIDQSjBauz0776Sc0");
+  background-image: url("../images/overlay.JPG");
+  /* background-image: url("https://drive.google.com/uc?export=view&id=1_iIhFo2M9oWCV-INIDQSjBauz0776Sc0"); */
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -2343,7 +2343,7 @@ div.timeline-panel{
   bottom: 0;
   left: 0;
   opacity: 0.2;
-  background-image: url('../images/background/blue-brush-1.jpg');
+  background-image: url('../images/background/blue-brush-1.avif');
 }
 #fh5co-health-protocol .icon{
   width: 54px;
@@ -2651,7 +2651,7 @@ fadeIn {  from {
   width: 100%;
   height: 100%;
   opacity: 0.15;
-  background-image: url('../images/background/blue-brush-1.jpg');
+  background-image: url('../images/background/blue-brush-1.avif');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
