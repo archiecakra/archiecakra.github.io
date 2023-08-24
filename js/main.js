@@ -193,26 +193,6 @@
 		$(".fh5co-loader").fadeOut("slow");
 	};
 
-	// var counter = function() {
-	// 	$('.js-counter').countTo({
-	// 		 formatter: function (value, options) {
-	//       return value.toFixed(options.decimals);
-	//     },
-	// 	});
-	// };
-
-	// var counterWayPoint = function() {
-	// 	if ($('#fh5co-counter').length > 0 ) {
-	// 		$('#fh5co-counter').waypoint( function( direction ) {
-										
-	// 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-	// 				setTimeout( counter , 400);					
-	// 				$(this.element).addClass('animated');
-	// 			}
-	// 		} , { offset: '90%' } );
-	// 	}
-	// };
-
 	// Parallax
 	var parallax = function() {
 		$(window).stellar();
@@ -284,9 +264,23 @@
 
 	});
 
+	function disableScrolling() {
+		var scrollPosition = [
+			self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+			self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+		];
+		var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+		html.data('scroll-position', scrollPosition);
+		html.data('previous-overflow', html.css('overflow'));
+		html.css('overflow', 'hidden');
+		window.scrollTo(scrollPosition[0], scrollPosition[1]);
+	}
+
 	// Button
 	function startUp() {
+
 		let fullName = new URLSearchParams(window.location.search).get('to');
+		disableScrolling();
 		
 		$("#name-input").val(fullName);
 		$('#full-name').text(fullName);
