@@ -225,7 +225,7 @@
 		clonedDiv.find('h6').text(name);
 		clonedDiv.find('p').eq(0).text(comment);
 		clonedDiv.find('time').eq(0).text(datetime);
-		$('#comment').after(clonedDiv);
+		$('.media-chat').last().after(clonedDiv);
 		clonedDiv.fadeIn(1500);
 	}
 
@@ -242,7 +242,7 @@
 		if (rule.test(name) == true && rule.test(comment) == true) {
 			addComment(name, comment, datetime);
 			$('#sent-comment')[0].play();
-			$('#chat-content').animate({ scrollTop: 0 }, 'fast');
+			$('#chat-content').animate({ scrollTop: $(document).height() - $('#chat-content').height() }, 1000);
 			$.ajax({
 				url: 'https://icypeach26-30cd.restdb.io/rest/comments?apikey=64928a82acb4d41a96344b00',
 				crossDomain: true,
